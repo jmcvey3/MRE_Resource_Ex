@@ -52,4 +52,4 @@ def run_pipeline(
 
 
 if __name__ == "__main__":
-    app()
+    app(["pipelines/turbulence/data/THEOM.vector_nospec.nc"])

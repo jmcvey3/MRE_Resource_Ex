@@ -1,0 +1,15 @@
+classname: pipelines.turbulence.pipeline.Turbulence
+
+triggers:
+  - .*vector.*\.nc
+
+retriever:
+  path: pipelines/turbulence/config/retriever.yaml
+
+dataset:
+  path: pipelines/turbulence/config/dataset.yaml
+
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml

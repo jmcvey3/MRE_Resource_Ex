@@ -1,0 +1,56 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*:
+    classname: tsdat.io.readers.NetCDFReader
+
+coords:
+  time:
+    name: time
+  dir:
+    name: dir
+  beam:
+    name: beam
+  inst:
+    name: inst
+  earth:
+    name: earth
+  tke:
+    name: tke
+  tau:
+    name: tau
+
+data_vars:
+  velocity:
+    name: vel
+  tke_vector:
+    name: tke_vec
+  stress_vector:
+    name: stress
+  turbulence_intensity:
+    name: TI
+  amplitude:
+    name: amp
+  correlation:
+    name: corr
+  heading:
+    name: heading
+  pitch:
+    name: pitch
+  roll:
+    name: roll
+  # acceleration:
+  #   name: accel
+  # angular_velocity:
+  #   name: angrt
+  orientation_matrix:
+    name: orientmat
+  speed_of_sound:
+    name: c_sound
+  pressure:
+    name: pressure
+  temperature:
+    name: temp
+  error:
+    name: error
+  battery_voltage:
+    name: batt

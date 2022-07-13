@@ -1,0 +1,54 @@
+attrs:
+  title: waves
+  description: Example ingest of raw XYZ and GPS data taken by a Sofar Spotter buoy
+  location_id: buoy
+  dataset_name: waves
+  data_level: b1
+  # qualifier:
+  # temporal:
+  # institution:
+
+coords:
+  time:
+    dims: [time]
+    dtype: datetime64[s]
+    attrs:
+      units: Seconds since 1970-01-01 00:00:00
+  dir:
+    dims: [dir]
+    dtype: str
+    attrs:
+      comment: "Direction of motion"
+      units: "1"
+
+data_vars:
+  displacement: # Name of variable in the output file
+    dims:
+      [dir, time] # List of coordinates that dimension this variable. `time` is
+      # a very common dimension, sometimes `height`, too.
+    dtype: float # The data type, typically one of: `float`, `long`, `int`
+    attrs:
+      long_name: Buoy Displacement # Label used by Xarray and other libraries for plotting
+      comment: "Translation motion as measured by the buoy" # User-friendly description of the property.
+      units: "m"
+      valid_range: [-3, 3]
+
+  t_elapsed:
+    dims: [time]
+    dtype: float
+    attrs:
+      long_name: Time Elapsed
+      comment: "Elapsed time since last computer restart"
+      units: "s"
+
+  latitude:
+    dims: [time]
+    dtype: float
+    attrs:
+      units: "deg N"
+
+  longitude:
+    dims: [time]
+    dtype: float
+    attrs:
+      units: "deg E"

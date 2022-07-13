@@ -1,0 +1,41 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*FLT.*:
+    classname: pipelines.waves.readers.MotionFileHandler
+  .*LOC.*:
+    classname: pipelines.waves.readers.GPSFileHandler
+
+coords:
+  time:
+    .*:
+      name: time
+      # data_converters:
+      #   - classname: tsdat.io.converters.Timestamp
+      #     timezone: "US/Pacific"
+      #     unit: "s"
+  dir:
+    .*FLT.*: # file pattern containing variable
+      name: dir
+
+data_vars:
+  displacement:
+    .*FLT.*:
+      name: displacement
+      data_converters:
+        - classname: tsdat.io.converters.UnitsConverter
+          input_units: mm
+
+  t_elapsed:
+    .*FLT.*:
+      name: t_elapsed
+      data_converters:
+        - classname: tsdat.io.converters.UnitsConverter
+          input_units: ms
+
+  latitude:
+    .*LOC.*:
+      name: lat
+
+  longitude:
+    .*LOC.*:
+      name: lon
