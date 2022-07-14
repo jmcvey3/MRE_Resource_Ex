@@ -177,31 +177,31 @@ data_vars:
   #   attrs:
   #     description: "IMU orientation during 5th beam measurement"
   #     units: "1"
-  acceleration:
-    dims: [dirIMU, time]
-    dtype: float
-    attrs:
-      units: "m/s^2"
-  angular_velocity:
-    dims: [dirIMU, time]
-    dtype: float
-    attrs:
-      units: "rad/s"
+  # acceleration:
+  #   dims: [dirIMU, time]
+  #   dtype: float
+  #   attrs:
+  #     units: "m/s^2"
+  # angular_velocity:
+  #   dims: [dirIMU, time]
+  #   dtype: float
+  #   attrs:
+  #     units: "rad/s"
   magnetic_field:
     dims: [dirIMU, time]
     dtype: float
     attrs:
       units: "uT"
-  acceleration_b5:
-    dims: [dirIMU, time]
-    dtype: float
-    attrs:
-      units: "m/s^2"
-  angular_velocity_b5:
-    dims: [dirIMU, time]
-    dtype: float
-    attrs:
-      units: "rad/s"
+  # acceleration_b5:
+  #   dims: [dirIMU, time]
+  #   dtype: float
+  #   attrs:
+  #     units: "m/s^2"
+  # angular_velocity_b5:
+  #   dims: [dirIMU, time]
+  #   dtype: float
+  #   attrs:
+  #     units: "rad/s"
   magnetic_field_b5:
     dims: [dirIMU, time]
     dtype: float
@@ -245,18 +245,18 @@ data_vars:
     attrs:
       description: "Transmit energy level"
       units: "dB"
-  ensemble:
-    dims: [time]
-    dtype: int
-    attrs:
-      description: "Ping count"
-      units: "1"
-  ensemble_b5:
-    dims: [time]
-    dtype: int
-    attrs:
-      description: "5th beam ping count"
-      units: "1"
+  # ensemble:
+  #   dims: [time]
+  #   dtype: int
+  #   attrs:
+  #     description: "Ping count"
+  #     units: "1"
+  # ensemble_b5:
+  #   dims: [time]
+  #   dtype: int
+  #   attrs:
+  #     description: "5th beam ping count"
+  #     units: "1"
   error:
     dims: [time]
     dtype: int

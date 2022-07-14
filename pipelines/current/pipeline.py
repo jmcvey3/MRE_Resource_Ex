@@ -15,16 +15,16 @@ class Current(IngestPipeline):
     ---------------------------------------------------------------------------------"""
 
     def hook_customize_dataset(self, dataset: xr.Dataset) -> xr.Dataset:
-        # DEVELOPER: (Optional) Use this hook to modify the dataset before qc is applied
+        # (Optional) Use this hook to modify the dataset before qc is applied
         return dataset
 
     def hook_finalize_dataset(self, dataset: xr.Dataset) -> xr.Dataset:
-        # DEVELOPER: (Optional) Use this hook to modify the dataset after qc is applied
+        # (Optional) Use this hook to modify the dataset after qc is applied
         # but before it gets saved to the storage area
         return dataset
 
     def hook_plot_dataset(self, dataset: xr.Dataset):
-        # DEVELOPER: (Optional, recommended) Create plots.
+        # (Optional, recommended) Create plots.
         # location = self.dataset_config.attrs.location_id
         # datastream: str = self.dataset_config.attrs.datastream
 

@@ -52,4 +52,6 @@ def run_pipeline(
 
 
 if __name__ == "__main__":
-    app(["pipelines/turbulence/data/THEOM.vector_nospec.nc"])
+    # app(["pipelines/waves/data/Aug2021/0009_FLT.CSV"])
+    # app(["pipelines/turbulence/data/THEOM.vector_nospec.nc"])
+    app(["pipelines/current/data/THEOM.b5m_nospec.nc"])
