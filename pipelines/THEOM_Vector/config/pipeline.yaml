@@ -1,0 +1,15 @@
+classname: pipelines.THEOM_Vector.pipeline.THEOM_Vector
+
+triggers:
+  - .*Vector.*\.nc
+
+retriever:
+  path: pipelines/THEOM_Vector/config/retriever.yaml
+
+dataset:
+  path: pipelines/THEOM_Vector/config/dataset.yaml
+
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml

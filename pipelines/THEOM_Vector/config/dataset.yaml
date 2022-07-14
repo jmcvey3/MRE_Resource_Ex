@@ -1,9 +1,13 @@
 attrs:
-  title: turbulence
-  description: Example ingest for ADV data processed using DOLfYN
-  location_id: adv
-  dataset_name: turbulence
-  data_level: a1
+  title: THEOM Vector Standardization Pipeline
+  description:
+    "THEOM (bottom lander) Nortek Vector data taken in Cook Inlet, AK
+    (60.7207031,-151.4294998) from 2021-07-01 to 2021-08-30. Raw data was recorded at 8
+    Hz, processed using the python package DOLfYN, v1.0.2 and averaged into 5 minute
+    ensembles."
+  location_id: cook_inlet
+  dataset_name: adv
+  data_level: b1
   # qualifier:
   # temporal:
   # institution:
@@ -38,6 +42,18 @@ coords:
     attrs:
       description: "Earth coordinate axes"
       units: "1"
+  f:
+    dims: [f]
+    dtype: float
+    attrs:
+      description: "FFT frequency vector"
+      units: "Hz"
+  S:
+    dims: [S]
+    dtype: str
+    attrs:
+      description: "Auto spectra"
+      units: "1"
   tke:
     dims: [tke]
     dtype: str
@@ -58,6 +74,12 @@ data_vars:
     attrs:
       description: "Measured water velocity"
       units: "m/s"
+  auto_spectra:
+    dims: [S, time, f]
+    dtype: float
+    attrs:
+      description: "Power spectral density of velocity"
+      units: "m^2/s^2/Hz"
   tke_vector:
     dims: [tke, time]
     dtype: float

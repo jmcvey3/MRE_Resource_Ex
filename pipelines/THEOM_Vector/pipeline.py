@@ -5,7 +5,8 @@ from tsdat import IngestPipeline  # , get_start_date_and_time_str, get_filename
 
 # from utils import format_time_xticks
 
-class Turbulence(IngestPipeline):
+
+class THEOM_Vector(IngestPipeline):
     """---------------------------------------------------------------------------------
     This is an example ingestion pipeline meant to demonstrate how one might set up a
     pipeline using this template repository.
@@ -17,7 +18,7 @@ class Turbulence(IngestPipeline):
         return dataset
 
     def hook_finalize_dataset(self, dataset: xr.Dataset) -> xr.Dataset:
-        #(Optional) Use this hook to modify the dataset after qc is applied
+        # (Optional) Use this hook to modify the dataset after qc is applied
         # but before it gets saved to the storage area
         return dataset
 

@@ -1,0 +1,15 @@
+classname: pipelines.THEOM_Sig500.pipeline.THEOM_Sig500
+
+triggers:
+  - .*b5m.*\.nc
+
+retriever:
+  path: pipelines/THEOM_Sig500/config/retriever.yaml
+
+dataset:
+  path: pipelines/THEOM_Sig500/config/dataset.yaml
+
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml
