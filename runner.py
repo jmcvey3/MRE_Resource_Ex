@@ -52,4 +52,4 @@ def run_pipeline(
 
 
 if __name__ == "__main__":
-    app()
+    app(["pipelines/THEOM_Vector/data/THEOM_Vector_binned.nc"])

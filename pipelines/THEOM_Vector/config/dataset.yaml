@@ -96,13 +96,21 @@ data_vars:
         "Stress vector, calculated from the cross-covariances of velocity (u,v,w)"
       units: "m^2/s^2"
   turbulence_intensity:
-    dims: ["time"]
+    dims: [time]
     dtype: float
     attrs:
       description:
         "Ratio of standard deviation of horizontal velocity to horizontal velocity
         magnitude."
       units: "%"
+  dissipation_rate:
+    dims: [S, time]
+    dtype: float
+    attrs:
+      description:
+        "Turbulent kinetic energy dissipation rate, calculated from method developed by
+        Lumley, Terray 1983."
+      units: "m^2/s^3"
   amplitude:
     dims: [dir, time]
     dtype: float

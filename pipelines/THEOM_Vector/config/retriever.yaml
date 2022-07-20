@@ -23,13 +23,15 @@ data_vars:
   velocity:
     name: vel
   auto_spectra:
-    name: auto-spectra
+    name: auto_spectra
   tke_vector:
     name: tke_vec
   stress_vector:
     name: stress_vec
   turbulence_intensity:
     name: TI
+  dissipation_rate:
+    name: dissipation_rate
   amplitude:
     name: amp
   correlation:
